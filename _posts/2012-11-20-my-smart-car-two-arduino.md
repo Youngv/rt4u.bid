@@ -8,7 +8,7 @@ Arduino，是一个开源的单板机控制器，采用了基于开放源代码�
 
 **Arduino Uno SMD** 意大利原装板
 
-![](https://cdn.jczkids.com/Arduino%20Uno%20SMD%20%E6%84%8F%E5%A4%A7%E5%88%A9%E5%8E%9F%E8%A3%85%E6%9D%BF.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/Arduino%20Uno%20SMD%20%E6%84%8F%E5%A4%A7%E5%88%A9%E5%8E%9F%E8%A3%85%E6%9D%BF.jpg)
 
 ### 技术规格
 
@@ -77,7 +77,7 @@ Arduino，是一个开源的单板机控制器，采用了基于开放源代码�
 
 Arduino买回来的第一件事就是测试板子是否能正常工作，在这之前先要在电脑上安装好Arduino的IDE。
 
-![](https://cdn.jczkids.com/Arduino%E7%9A%84IDE.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/Arduino%E7%9A%84IDE.jpg)
 
 #### 安装方法
 

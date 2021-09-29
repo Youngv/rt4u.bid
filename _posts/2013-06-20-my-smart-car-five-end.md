@@ -204,21 +204,21 @@ void loop()
 
 ### 最终APP：
 
-![](https://cdn.jczkids.com/APP%E7%95%8C%E9%9D%A2.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/APP%E7%95%8C%E9%9D%A2.jpg)
 
 ### 演示视频
 
 <video controls width="640" height="360" preload="none">
-  <source src="https://cdn.jczkids.com/Arduino%2BAndroid%20%E8%93%9D%E7%89%99%E9%81%A5%E6%8E%A7%E5%B0%8F%E8%BD%A6.mp4" type="video/mp4">
+  <source src="https://f002.backblazeb2.com/file/as-cdn/blog/Arduino%2BAndroid%20%E8%93%9D%E7%89%99%E9%81%A5%E6%8E%A7%E5%B0%8F%E8%BD%A6.mp4" type="video/mp4">
   Your browser does not support the <code>video</code> element.
 </video>
 
 ### 相关下载
 
-+   Arduino程序下载地址：[七牛云](https://cdn.jczkids.com/ArduinoCar.ino)
++   Arduino程序下载地址：[七牛云](https://f002.backblazeb2.com/file/as-cdn/blog/ArduinoCar.ino)
 
-+   安卓APP下载程序：[七牛云](https://cdn.jczkids.com/BlueCar.apk)
++   安卓APP下载程序：[七牛云](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.apk)
 
-+   Appinventor程序下载地址：[七牛云](https://cdn.jczkids.com/BlueCar.zip)
++   Appinventor程序下载地址：[七牛云](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.zip)
 
-+   研究性报告：[七牛云](https://cdn.jczkids.com/%E7%A0%94%E7%A9%B6%E6%80%A7%E6%8A%A5%E5%91%8A.pdf)
++   研究性报告：[七牛云](https://f002.backblazeb2.com/file/as-cdn/blog/%E7%A0%94%E7%A9%B6%E6%80%A7%E6%8A%A5%E5%91%8A.pdf)

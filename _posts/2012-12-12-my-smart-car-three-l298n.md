@@ -8,25 +8,25 @@ title: 我的智能小车（三）—— L298N 电机驱动篇
 L298N是SGS公司的产品，内部包含4通道逻辑驱动电路，是一种二相和四相电机的专用驱动器，即内含二个H桥的高电压大电流双全桥式驱动器，接收标准TTL逻辑电平信号，可驱动46V、2A以下的电机。
 其实物及引脚图如下所示：
 
-![](https://cdn.jczkids.com/L298N.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N.jpg)
 
-![](https://cdn.jczkids.com/L298N%E5%BC%95%E8%84%9A%E5%9B%BE.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N%E5%BC%95%E8%84%9A%E5%9B%BE.jpg)
 
 我采用的是L298N模块，里面已经集成了L298N的驱动芯片，由于直流电机需要很大的电流才能驱动，所以L298N芯片工作时会产生很大的热量，一般L298N模块都会有一个散热片和L298N芯片连接在一起。下图是我使用的L298N驱动模块：
 
-![](https://cdn.jczkids.com/L298N%E5%8F%8C%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N%E5%8F%8C%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%A8%A1%E5%9D%97.jpg)
 
-![](https://cdn.jczkids.com/L298N%E6%A8%A1%E5%9D%97.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N%E6%A8%A1%E5%9D%97.jpg)
 
 另外，Arduino也有L298N电机驱动扩展板，可以和Arduino像积木一样拼起来，可以省下不少的连线，放图一张
 
-![](https://cdn.jczkids.com/L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%89%A9%E5%B1%95%E6%9D%BF.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8%E6%89%A9%E5%B1%95%E6%9D%BF.jpg)
 
 ### L298N电机驱动模块控制方法
 
 L298N的OUT1和OUT2连接一个直流电机的两级，OUT3和OUT4连接另一个直流电机的两级，这样L298N就和两个直流电机连接在一起，然后通过Arduino的I／O口给IN1、IN2、IN3、IN4分别输入高低电平就能控制电机的转动方向，下图是L298N电机驱动模块控制电机转动的编码图：
 
-![](https://cdn.jczkids.com/L298N%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A0%81%E5%9B%BE.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/L298N%E9%A9%B1%E5%8A%A8%E7%BC%96%E7%A0%81%E5%9B%BE.jpg)
 
 如果希望能够控制电机的转速，那么需要通过脉冲宽度调制（PWM）来控制电机的电压，从而实现电动机转速的控制，把Arduino的两个PWM输出口分别连接到L298N模块的ENA和ENB，ENA和ENB默认是和5V的高电平相连，也就是默认最大的转速。
 

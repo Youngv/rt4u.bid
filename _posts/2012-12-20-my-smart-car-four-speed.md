@@ -4,11 +4,11 @@ title: 我的智能小车（四）——测速篇
 
 装上了电机驱动，小车就可以跑起来了，但是如果希望能够精确的控制小车移动的距离就需要加上测速模块，下图是我使用的测速模块：
 
-![](https://cdn.jczkids.com/%E6%B5%8B%E9%80%9F%E6%A8%A1%E5%9D%97.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/%E6%B5%8B%E9%80%9F%E6%A8%A1%E5%9D%97.jpg)
 
 测速模块四个引脚定义为 +5V &nbsp;GND &nbsp;OUT1 OUT2，其中OUT1 OUT2为电平输出，直接接入单片机IO口，每一路带一个LED指示其输出状态，模块的工作电压3.3V—5V。然后在小车轮子的轴上固定上码盘，当轮子转动时，码盘会随轮子一起转动。
 
-![](https://cdn.jczkids.com/%E7%A0%81%E7%9B%98.jpg)
+![](https://f002.backblazeb2.com/file/as-cdn/blog/%E7%A0%81%E7%9B%98.jpg)
 
 ### 测速原理
 
