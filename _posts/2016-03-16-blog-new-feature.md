@@ -5,7 +5,7 @@ title: Jekyll 百度统计、Disqus 评论框和自动化部署功能
 
 ## 功能概述
 
-本文介绍如何为Jekyll博客添加三个实用功能：百度统计分析、Disqus评论系统以及Git自动化部署，这些功能将大大提升博客的用户体验和维护效率。
+本文介绍如何为 Jekyll 博客添加三个实用功能：百度统计分析、Disqus 评论系统以及 Git 自动化部署，这些功能将大大提升博客的用户体验和维护效率。
 
 ## 百度统计
 
@@ -13,7 +13,7 @@ title: Jekyll 百度统计、Disqus 评论框和自动化部署功能
 
 ### 配置步骤
 
-1. 在`_config.yml`中添加百度统计的CODE
+1. 在`_config.yml`中添加百度统计的 CODE
 
 ```yaml
 baidu_analyze: 6cbd58856f0a045b48fc948c2e4679c6
@@ -45,28 +45,28 @@ baidu_analyze: 6cbd58856f0a045b48fc948c2e4679c6
 {% endraw %}
 ```
 
-## Disqus评论系统
+## Disqus 评论系统
 
-Disqus是一个流行的第三方评论系统，支持多种社交媒体登录，可以为您的静态博客添加互动功能。
+Disqus 是一个流行的第三方评论系统，支持多种社交媒体登录，可以为您的静态博客添加互动功能。
 
 ### 配置步骤
 
-1. 在[Disqus官网](https://disqus.com/)注册账号，获取需要添加的代码
+1. 在[Disqus 官网](https://disqus.com/)注册账号，获取需要添加的代码
 
-2. 新建`_includes/disqus.html`文件（注意替换以下代码中的Disqus网站标识符）
+2. 新建`_includes/disqus.html`文件（注意替换以下代码中的 Disqus 网站标识符）
 
 ```html
 <div id="disqus_thread"></div>
 <script>
     (function() {
         var d = document, s = d.createElement('script');
-        s.src = '//blueboy.disqus.com/embed.js';  // 替换为您的Disqus网站标识符
+        s.src = '//blueboy.disqus.com/embed.js';  // 替换为您的 Disqus 网站标识符
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
 </script>
 <noscript>
-    请启用JavaScript以查看<a href="https://disqus.com/?ref_noscript" rel="nofollow">由Disqus提供的评论。</a>
+    请启用 JavaScript 以查看<a href="https://disqus.com/?ref_noscript" rel="nofollow">由 Disqus 提供的评论。</a>
 </noscript>
 ```
 
@@ -80,11 +80,11 @@ Disqus是一个流行的第三方评论系统，支持多种社交媒体登录�
 
 ## 自动化部署
 
-通过Git钩子实现博客的自动化部署，可以大大简化发布流程，提高维护效率。
+通过 Git 钩子实现博客的自动化部署，可以大大简化发布流程，提高维护效率。
 
 ### 服务器配置
 
-1. 在服务器上执行以下命令，创建Git仓库
+1. 在服务器上执行以下命令，创建 Git 仓库
 
 ```bash
 mkdir ~/awesomeblog.git && cd ~/awesomeblog.git
@@ -120,7 +120,7 @@ chmod +x hooks/post-receive
 git remote add deploy root@blueboy.me:~/awesomeblog.git
 ```
 
-2. 确保服务器上的Nginx配置指向`/var/www/sites`目录
+2. 确保服务器上的 Nginx 配置指向`/var/www/sites`目录
 
 3. 完成更新后，执行以下命令部署博客
 
@@ -132,6 +132,6 @@ git push deploy master
 
 1. **百度统计**：当用户访问您的网站时，统计代码会收集访问数据并发送到百度统计后台。
 
-2. **Disqus评论**：Disqus通过JavaScript加载评论系统，用户可以在您的文章下方看到评论区并参与讨论。
+2. **Disqus 评论**：Disqus 通过 JavaScript 加载评论系统，用户可以在您的文章下方看到评论区并参与讨论。
 
-3. **自动化部署**：当您执行`git push deploy master`时，服务器上的Git钩子会自动运行，将您的博客代码拉取并构建到网站目录中。
+3. **自动化部署**：当您执行`git push deploy master`时，服务器上的 Git 钩子会自动运行，将您的博客代码拉取并构建到网站目录中。

@@ -9,7 +9,7 @@ title: 我的智能小车（五）——终结篇
 
 ## 最终程序
 
-完整的Arduino代码如下：
+完整的 Arduino 代码如下：
 
 ```c
 /*
@@ -18,8 +18,8 @@ title: 我的智能小车（五）——终结篇
  */
 
 // 测速模块
-int SpeedNumLeft = 12;  // 连接到pin 12
-int SpeedNmuRight = 13; // 连接到pin 13
+int SpeedNumLeft = 12;  // 连接到 pin 12
+int SpeedNmuRight = 13; // 连接到 pin 13
 
 // 左轮驱动
 int MotorLeftPinA = 2;
@@ -69,8 +69,8 @@ void setup()
 /**
  * 电机驱动函数
  * @param motor 电机选择，'L'为左轮，'R'为右轮
- * @param speed 速度值(0-255)
- * @param dir   方向，1为正转，0为反转
+ * @param speed 速度值 (0-255)
+ * @param dir   方向，1 为正转，0 为反转
  */
 void MOTORDRIVE(char motor, int speed, int dir)
 {
@@ -113,13 +113,13 @@ void SpeedNum(char motor)
 {
     if(motor == 'L')
     {
-        i = digitalRead(SpeedNumLeft);  // 读取码盘状态（0或1）
+        i = digitalRead(SpeedNumLeft);  // 读取码盘状态（0 或 1）
         if(!flagL){  // 获取初始状态读数
             j = i;
             flagL = 1;
         }
 
-        if(i != j){  // 每次状态发生跳变的时候，读数增加1
+        if(i != j){  // 每次状态发生跳变的时候，读数增加 1
             n += 1;
             j = i;
             Serial.print("Left:");
@@ -131,13 +131,13 @@ void SpeedNum(char motor)
 
     if(motor == 'R')
     {
-        x = digitalRead(SpeedNmuRight);  // 读取码盘状态（0或1）
+        x = digitalRead(SpeedNmuRight);  // 读取码盘状态（0 或 1）
         if(!flagR){  // 获取初始状态读数
             y = x;
             flagR = 1;
         }
 
-        if(x != y){  // 每次状态发生跳变的时候，读数增加1
+        if(x != y){  // 每次状态发生跳变的时候，读数增加 1
             m += 1;
             y = x;
             Serial.print("Right:");
@@ -237,9 +237,9 @@ void loop()
 
 ## 控制应用界面
 
-为了方便控制小车，我开发了一个Android手机应用，通过蓝牙与小车连接并进行远程控制。
+为了方便控制小车，我开发了一个 Android 手机应用，通过蓝牙与小车连接并进行远程控制。
 
-![APP控制界面](https://f002.backblazeb2.com/file/as-cdn/blog/APP%E7%95%8C%E9%9D%A2.jpg)
+![APP 控制界面](https://f002.backblazeb2.com/file/as-cdn/blog/APP%E7%95%8C%E9%9D%A2.jpg)
 
 ## 演示视频
 
@@ -254,14 +254,14 @@ void loop()
 
 以下是项目相关文件的下载地址：
 
-1. **Arduino程序**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/ArduinoCar.ino)
-2. **Android应用APK**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.apk)
-3. **App Inventor项目文件**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.zip)
+1. **Arduino 程序**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/ArduinoCar.ino)
+2. **Android 应用 APK**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.apk)
+3. **App Inventor 项目文件**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/BlueCar.zip)
 4. **研究性报告**：[下载地址](https://f002.backblazeb2.com/file/as-cdn/blog/%E7%A0%94%E7%A9%B6%E6%80%A7%E6%8A%A5%E5%91%8A.pdf)
 
 ## 项目反思
 
-虽然这个智能小车项目只是一个半成品，但通过它我学习了很多关于Arduino编程、电机驱动控制、Android应用开发以及蓝牙通信的知识。未来如果有机会，我希望能够继续完善以下功能：
+虽然这个智能小车项目只是一个半成品，但通过它我学习了很多关于 Arduino 编程、电机驱动控制、Android 应用开发以及蓝牙通信的知识。未来如果有机会，我希望能够继续完善以下功能：
 
 1. 添加更多传感器（如超声波）实现避障功能
 2. 优化速度控制算法，实现更平稳的行驶

@@ -144,9 +144,9 @@ Nov 21 11:38:16.000 [notice] Bootstrapped 100%: Done
 1. **Firefox**：
    - 打开设置 -> 网络设置
    - 选择"手动配置代理"
-   - SOCKS主机：127.0.0.1，端口：9050
+   - SOCKS 主机：127.0.0.1，端口：9050
    - 选择"SOCKS v5"
-   - 勾选"通过代理服务器发送DNS请求"
+   - 勾选"通过代理服务器发送 DNS 请求"
 
 2. **Chrome/Safari**：
    - 安装 SwitchyOmega 插件

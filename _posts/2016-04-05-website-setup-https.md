@@ -5,11 +5,11 @@ title: 从 HTTP 迁移到 HTTPS 配置 SSL 证书和 Nginx
 
 ## 概述
 
-由于博客中可能会存在一些敏感内容，所以担心如果采用HTTP的访问方式可能会被GFW监听到然后导致被墙的后果，所以决定配置HTTPS的访问方式，使访问更加安全。HTTPS通过SSL/TLS加密传输数据，不仅可以增强网站安全性，还能提高SEO排名和用户信任度。
+由于博客中可能会存在一些敏感内容，所以担心如果采用 HTTP 的访问方式可能会被 GFW 监听到然后导致被墙的后果，所以决定配置 HTTPS 的访问方式，使访问更加安全。HTTPS 通过 SSL/TLS 加密传输数据，不仅可以增强网站安全性，还能提高 SEO 排名和用户信任度。
 
-## SSL证书选择与购买
+## SSL 证书选择与购买
 
-选择合适的SSL证书是配置HTTPS的第一步。根据不同需求，可以选择以下类型的证书：
+选择合适的 SSL 证书是配置 HTTPS 的第一步。根据不同需求，可以选择以下类型的证书：
 
 - [PositiveSSL](https://www.ssls.com/ssl-certificates/comodo-positivessl) 
     - 价格实惠，首年只需要$3.88/年
@@ -23,9 +23,9 @@ title: 从 HTTP 迁移到 HTTPS 配置 SSL 证书和 Nginx
 
 ## 生成 CSR 代码
 
-CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时必需的代码。以下是生成CSR的步骤：
+CSR（Certificate Signing Request）是向证书颁发机构申请 SSL 证书时必需的代码。以下是生成 CSR 的步骤：
 
-1. 在服务器上执行以下命令，生成私钥和CSR文件：
+1. 在服务器上执行以下命令，生成私钥和 CSR 文件：
 
    ```bash
    openssl req -new -newkey rsa:2048 -nodes -keyout blueboy.key -out blueboy.csr
@@ -47,13 +47,13 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
 
 3. 完成上述步骤后会生成两个文件：
    - `blueboy.key`：私钥文件，**必须妥善保管，不要泄露**
-   - `blueboy.csr`：CSR文件，包含向证书颁发机构申请证书的信息
+   - `blueboy.csr`：CSR 文件，包含向证书颁发机构申请证书的信息
 
 ## 激活 SSL 证书
 
 1. 登录 [SSLS.com](https://www.ssls.com/user/certificates) 账户，选择已购买的证书进入激活流程
 
-2. 将 `blueboy.csr` 文件中的内容粘贴到指定位置（CSR Code输入框）
+2. 将 `blueboy.csr` 文件中的内容粘贴到指定位置（CSR Code 输入框）
 
 3. 输入网站的基本信息，如管理员联系方式等
 
@@ -66,7 +66,7 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
    scp xxxx.txt root@blueboy.me:/blog/root_dir
    ```
 
-5. 等待域名验证（通常需要30分钟左右），证书颁发机构会检测根目录的验证文件
+5. 等待域名验证（通常需要 30 分钟左右），证书颁发机构会检测根目录的验证文件
 
 6. 证书生成后，下载并上传到服务器：
 
@@ -122,7 +122,7 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
        listen [::]:80;
        server_name blueboy.me;
        
-       # 永久重定向到HTTPS
+       # 永久重定向到 HTTPS
        return 301 https://$host$request_uri;
    }
    ```
@@ -144,25 +144,25 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
 
 ## 网站资源适配
 
-为了避免混合内容警告（Mixed Content），需要确保网站中的所有资源都通过HTTPS加载：
+为了避免混合内容警告（Mixed Content），需要确保网站中的所有资源都通过 HTTPS 加载：
 
-1. 将所有外部资源的URL从`http://`更改为`https://`，包括：
+1. 将所有外部资源的 URL 从`http://`更改为`https://`，包括：
    - JavaScript 文件
    - CSS 样式表
    - 图片和媒体文件
-   - 外部API和服务
-2. 对于第三方服务和CDN：
-   - 七牛云等CDN服务需要在管理面板中开启HTTPS访问
+   - 外部 API 和服务
+2. 对于第三方服务和 CDN：
+   - 七牛云等 CDN 服务需要在管理面板中开启 HTTPS 访问
    - 使用相对路径引用资源（如 `//example.com/script.js`）可以自动匹配协议
 
 ## 验证 HTTPS 配置
 
-完成上述步骤后，可以通过以下方式验证HTTPS配置：
+完成上述步骤后，可以通过以下方式验证 HTTPS 配置：
 
 1. 通过浏览器访问 `https://blueboy.me`，确认能正常加载并显示安全锁图标
-2. 使用 [SSL Labs](https://www.ssllabs.com/ssltest/) 测试网站SSL配置安全性
+2. 使用 [SSL Labs](https://www.ssllabs.com/ssltest/) 测试网站 SSL 配置安全性
 3. 检查控制台是否有混合内容警告
 
 ## 结语
 
-至此，博客已成功从HTTP迁移到HTTPS。HTTPS不仅是网站发展的趋势，也是保护用户隐私和数据安全的重要措施。随着浏览器对非HTTPS网站的警告越来越严格，及时迁移到HTTPS对网站的可访问性和SEO排名都有积极影响。
+至此，博客已成功从 HTTP 迁移到 HTTPS。HTTPS 不仅是网站发展的趋势，也是保护用户隐私和数据安全的重要措施。随着浏览器对非 HTTPS 网站的警告越来越严格，及时迁移到 HTTPS 对网站的可访问性和 SEO 排名都有积极影响。
