@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Ubuntu 14.04 搭建 IPsec/L2TP VPN 服务器
 ---
 

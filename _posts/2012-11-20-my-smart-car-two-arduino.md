@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 我的智能小车（二）—— Arduino 篇
 ---
 

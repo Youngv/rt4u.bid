@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Tor 和 Shadowsocks 双重高度匿名代理
 ---
 

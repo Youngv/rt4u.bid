@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 从 HTTP 迁移到 HTTPS 配置 SSL 证书和 Nginx
 ---
 
@@ -11,15 +12,14 @@ title: 从 HTTP 迁移到 HTTPS 配置 SSL 证书和 Nginx
 选择合适的SSL证书是配置HTTPS的第一步。根据不同需求，可以选择以下类型的证书：
 
 - [PositiveSSL](https://www.ssls.com/ssl-certificates/comodo-positivessl) 
-  - 价格实惠，首年只需要$3.88/年
-  - 一次性买三年$4.99/年
-  - 仅支持一个主域名
-  - 适合个人博客或小型网站
-
+    - 价格实惠，首年只需要$3.88/年
+    - 一次性买三年$4.99/年
+    - 仅支持一个主域名
+    - 适合个人博客或小型网站
 - [PositiveSSL Wildcard](https://www.ssls.com/ssl-certificates/comodo-positivessl-wildcard) 
-  - 价格约$90/年
-  - 支持一个主域名和无限个二级域名
-  - 适合有多个子域名的企业网站
+    - 价格约$90/年
+    - 支持一个主域名和无限个二级域名
+    - 适合有多个子域名的企业网站
 
 ## 生成 CSR 代码
 
@@ -151,7 +151,6 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
    - CSS 样式表
    - 图片和媒体文件
    - 外部API和服务
-
 2. 对于第三方服务和CDN：
    - 七牛云等CDN服务需要在管理面板中开启HTTPS访问
    - 使用相对路径引用资源（如 `//example.com/script.js`）可以自动匹配协议
@@ -161,9 +160,7 @@ CSR（Certificate Signing Request）是向证书颁发机构申请SSL证书时�
 完成上述步骤后，可以通过以下方式验证HTTPS配置：
 
 1. 通过浏览器访问 `https://blueboy.me`，确认能正常加载并显示安全锁图标
-
 2. 使用 [SSL Labs](https://www.ssllabs.com/ssltest/) 测试网站SSL配置安全性
-
 3. 检查控制台是否有混合内容警告
 
 ## 结语
