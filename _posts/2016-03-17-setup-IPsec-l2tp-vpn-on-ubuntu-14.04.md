@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: Ubuntu 14.04 搭建 IPsec/L2TP VPN 服务器
 ---
 

@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 暑假报告 - 在迷茫与充实间徘徊的日子
 ---
 

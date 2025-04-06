@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 从 HTTP 迁移到 HTTPS 配置 SSL 证书和 Nginx
 ---
 

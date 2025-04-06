@@ -28,7 +28,7 @@ url: "https://blog.rt4u.bid" # the base hostname & protocol for your site, e.g. 
 # github_username: ""
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
 
@@ -51,3 +51,5 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+excerpt_separator: ""  # 设置为空字符串

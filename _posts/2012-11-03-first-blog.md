@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 第一篇博客 - 我的技术探索之旅
 ---
 

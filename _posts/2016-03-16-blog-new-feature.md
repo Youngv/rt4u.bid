@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: Jekyll 百度统计、Disqus 评论框和自动化部署功能
 ---
 

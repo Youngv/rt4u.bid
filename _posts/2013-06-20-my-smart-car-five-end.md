@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 我的智能小车（五）——终结篇
 ---
 

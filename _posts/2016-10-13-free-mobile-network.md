@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 三大运营商的 OpenVPN 免流技术实现
 ---
 

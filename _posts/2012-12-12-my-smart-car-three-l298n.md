@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 我的智能小车（三）—— L298N 电机驱动篇
 ---
 

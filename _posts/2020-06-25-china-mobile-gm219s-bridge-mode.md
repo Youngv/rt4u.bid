@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: single
+toc: true
 title: 移动光猫 GM219-S 改桥接模式详细教程
 ---
 
