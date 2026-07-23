@@ -1,0 +1,8 @@
+Generate a commit message for changes with description.
+The commit message MUST use the imperative tense.
+The commit message should be structured as follows: <type>: <title>
+The commit message should come with a list of description of changes after the title with a blank line.
+Remember don't make the title too long.
+Use these for <type>: fix, feat, build, chore, ci, docs, style, refactor, perf, test
+
+

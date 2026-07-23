@@ -1,0 +1,6 @@
+main:
+  - title: "主题配置"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    target: _blank
+  - title: "关于"
+    url: /about
